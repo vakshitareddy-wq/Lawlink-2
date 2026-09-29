@@ -1,363 +1,267 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-[#0b0b09] text-[#f0ede3]">
 
-      {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-5 md:px-12">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-xl text-white">
-            ⚖️
+      {/* Hero */}
+      <section className="px-6 py-16 md:px-16 lg:px-24">
+
+        {/* Brand */}
+        <div className="mb-20">
+          <div className="text-2xl font-bold tracking-[0.2em] text-[#c9a64a]">
+            § LAWLINK
           </div>
-
-          <span className="text-xl font-bold">
-            LawLink
-          </span>
         </div>
 
-        <div className="hidden items-center gap-8 text-sm font-medium md:flex">
-          <a href="#features" className="hover:text-blue-600">
-            Features
-          </a>
+        <div className="grid items-center gap-16 lg:grid-cols-2">
 
-          <a href="#how" className="hover:text-blue-600">
-            How it works
-          </a>
+          {/* Left */}
+          <div>
+            <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#c9a64a]">
+              Legal Technology
+            </p>
 
-          <a href="#about" className="hover:text-blue-600">
-            About
-          </a>
-        </div>
+            <h1 className="max-w-3xl font-serif text-5xl leading-tight md:text-7xl">
+              Know your rights.
+              <br />
+              <span className="text-[#c9a64a]">
+                Know your next step.
+              </span>
+            </h1>
 
-        <button className="rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700">
-          Get Started
-        </button>
-      </nav>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-[#b7b2a6]">
+              LawLink makes legal information easier to understand,
+              helping you discover your basic rights and find the
+              right next step.
+            </p>
 
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Link
+                href="/basic-rights"
+                className="rounded-full bg-[#c9a64a] px-7 py-3 font-semibold text-[#0b0b09] transition hover:bg-[#d8b65a]"
+              >
+                Explore Your Rights
+              </Link>
 
-      {/* Hero Section */}
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-16 md:grid-cols-2 md:px-12 md:pt-24">
-
-        <div>
-
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            ✨ Legal awareness, simplified
+              <Link
+                href="/ai-help"
+                className="rounded-full border border-[#c9a64a] px-7 py-3 font-semibold text-[#c9a64a] transition hover:bg-[#c9a64a] hover:text-[#0b0b09]"
+              >
+                Ask AI
+              </Link>
+            </div>
           </div>
 
-          <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-6xl">
-            Know your rights.
-            <span className="block text-blue-600">
-              Know your next step.
-            </span>
-          </h1>
+          {/* Case Card */}
+          <div className="relative">
+            <div className="rounded-3xl border border-[#37342c] bg-[#191814] p-8 shadow-2xl">
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            LawLink makes legal awareness simple, practical and engaging
-            through real-world scenarios, quizzes, gamification and an
-            AI-powered legal awareness assistant.
-          </p>
+              <div className="mb-10 flex items-center justify-between">
+                <span className="text-sm uppercase tracking-[0.25em] text-[#b7b2a6]">
+                  LAWLINK
+                </span>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <span className="rounded-full border border-[#c9a64a] px-3 py-1 text-xs text-[#c9a64a]">
+                  OPEN
+                </span>
+              </div>
 
-            <button className="rounded-xl bg-blue-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-blue-700">
-              Start Learning →
-            </button>
-
-            <button className="rounded-xl border border-slate-300 bg-white px-7 py-3.5 font-semibold text-slate-700 transition hover:bg-slate-100">
-              Explore Topics
-            </button>
-
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-slate-500">
-            <span>✓ Scenario based</span>
-            <span>✓ Gamified learning</span>
-            <span>✓ Trusted resources</span>
-          </div>
-
-        </div>
-
-
-        {/* Dashboard Preview */}
-        <div className="relative">
-
-          <div className="absolute -right-5 -top-5 h-32 w-32 rounded-full bg-blue-200 opacity-50 blur-3xl" />
-
-          <div className="relative rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl">
-
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-slate-500">
-                  Your progress
+              <div className="border-t border-[#37342c] pt-8">
+                <p className="text-sm uppercase tracking-[0.2em] text-[#b7b2a6]">
+                  Legal Access
                 </p>
 
-                <h2 className="mt-1 text-2xl font-bold">
-                  Welcome back 👋
+                <h2 className="mt-4 font-serif text-4xl">
+                  Justice should be
+                  <br />
+                  easier to understand.
                 </h2>
               </div>
 
-              <div className="rounded-xl bg-orange-100 px-3 py-2 text-sm font-bold text-orange-600">
-                🔥 5 days
-              </div>
-            </div>
-
-
-            {/* XP */}
-            <div className="mt-6 rounded-2xl bg-slate-50 p-5">
-
-              <div className="flex items-center justify-between">
-                <span className="font-semibold">
-                  Level 4
-                </span>
-
-                <span className="text-sm font-medium text-blue-600">
-                  ⭐ 820 XP
-                </span>
-              </div>
-
-              <div className="mt-3 h-3 overflow-hidden rounded-full bg-slate-200">
-                <div className="h-full w-[82%] rounded-full bg-blue-600" />
-              </div>
-
-              <p className="mt-2 text-xs text-slate-500">
-                820 / 1000 XP
-              </p>
-
-            </div>
-
-
-            {/* Topics */}
-            <div className="mt-6">
-
-              <div className="mb-4 flex items-center justify-between">
-                <h3 className="font-bold">
-                  Continue learning
-                </h3>
-
-                <span className="text-sm text-blue-600">
-                  View all
-                </span>
-              </div>
-
-
-              <div className="space-y-3">
-
-                <div className="flex items-center gap-4 rounded-2xl border border-slate-100 p-4">
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-xl">
-                    🔐
-                  </div>
-
-                  <div className="flex-1">
-
-                    <div className="flex justify-between">
-                      <span className="font-semibold">
-                        Cyber Safety
-                      </span>
-
-                      <span className="text-sm text-slate-500">
-                        80%
-                      </span>
-                    </div>
-
-                    <div className="mt-2 h-2 rounded-full bg-slate-100">
-                      <div className="h-full w-[80%] rounded-full bg-blue-500" />
-                    </div>
-
-                  </div>
-
+              <div className="mt-12 grid grid-cols-3 gap-4 border-t border-[#37342c] pt-6 text-sm">
+                <div>
+                  <p className="text-[#b7b2a6]">01</p>
+                  <p className="mt-1">Rights</p>
                 </div>
 
-
-                <div className="flex items-center gap-4 rounded-2xl border border-slate-100 p-4">
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-xl">
-                    🛒
-                  </div>
-
-                  <div className="flex-1">
-
-                    <div className="flex justify-between">
-                      <span className="font-semibold">
-                        Consumer Rights
-                      </span>
-
-                      <span className="text-sm text-slate-500">
-                        45%
-                      </span>
-                    </div>
-
-                    <div className="mt-2 h-2 rounded-full bg-slate-100">
-                      <div className="h-full w-[45%] rounded-full bg-green-500" />
-                    </div>
-
-                  </div>
-
+                <div>
+                  <p className="text-[#b7b2a6]">02</p>
+                  <p className="mt-1">AI Help</p>
                 </div>
 
-
-                <div className="flex items-center gap-4 rounded-2xl border border-slate-100 p-4">
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-xl">
-                    🚗
-                  </div>
-
-                  <div className="flex-1">
-
-                    <div className="flex justify-between">
-                      <span className="font-semibold">
-                        Road Laws
-                      </span>
-
-                      <span className="text-sm text-slate-500">
-                        20%
-                      </span>
-                    </div>
-
-                    <div className="mt-2 h-2 rounded-full bg-slate-100">
-                      <div className="h-full w-[20%] rounded-full bg-orange-500" />
-                    </div>
-
-                  </div>
-
+                <div>
+                  <p className="text-[#b7b2a6]">03</p>
+                  <p className="mt-1">Learning</p>
                 </div>
-
               </div>
-
             </div>
-
-
-            {/* Badge */}
-            <div className="mt-6 flex items-center gap-4 rounded-2xl bg-blue-50 p-4">
-
-              <div className="text-3xl">
-                🛡️
-              </div>
-
-              <div>
-                <p className="text-xs font-medium text-blue-600">
-                  ACHIEVEMENT UNLOCKED
-                </p>
-
-                <p className="font-bold">
-                  Cyber Guardian
-                </p>
-              </div>
-
-            </div>
-
           </div>
 
         </div>
-
       </section>
 
+      {/* Main Options */}
+      <section className="border-t border-[#37342c] px-6 py-20 md:px-16 lg:px-24">
 
-      {/* Features */}
-      <section
-        id="features"
-        className="border-t border-slate-200 bg-white px-6 py-20 md:px-12"
-      >
+        <div className="mb-12">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#c9a64a]">
+            Choose your path
+          </p>
 
-        <div className="mx-auto max-w-7xl">
+          <h2 className="mt-4 font-serif text-4xl md:text-5xl">
+            Start where you need help.
+          </h2>
+        </div>
 
-          <div className="mx-auto max-w-2xl text-center">
+        <div className="grid gap-6 md:grid-cols-3">
 
-            <p className="font-semibold text-blue-600">
-              WHY LAWLINK?
+          {/* Basic Rights */}
+          <Link
+            href="/basic-rights"
+            className="group rounded-3xl border border-[#37342c] bg-[#191814] p-8 transition duration-300 hover:-translate-y-2 hover:border-[#c9a64a]"
+          >
+            <div className="flex items-center justify-between">
+              <span className="text-4xl text-[#c9a64a]">§</span>
+              <span className="text-sm text-[#b7b2a6]">01</span>
+            </div>
+
+            <h3 className="mt-12 font-serif text-3xl">
+              Basic Rights
+            </h3>
+
+            <p className="mt-4 leading-7 text-[#b7b2a6]">
+              Understand everyday legal rights in simple,
+              accessible language.
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-              Legal awareness made engaging
-            </h2>
+            <div className="mt-8 text-sm font-semibold text-[#c9a64a]">
+              Explore Rights →
+            </div>
+          </Link>
 
-            <p className="mt-4 text-slate-600">
-              Learn what your rights are and understand practical next
-              steps without getting lost in complicated legal language.
+          {/* AI Legal Assistant */}
+          <Link
+            href="/ai-help"
+            className="group rounded-3xl border border-[#c9a64a] bg-[#211f19] p-8 transition duration-300 hover:-translate-y-2"
+          >
+            <div className="flex items-center justify-between">
+              <span className="text-4xl text-[#c9a64a]">✦</span>
+              <span className="rounded-full bg-[#c9a64a] px-3 py-1 text-xs font-bold text-[#0b0b09]">
+                AI
+              </span>
+            </div>
+
+            <h3 className="mt-12 font-serif text-3xl">
+              AI Legal Assistant
+            </h3>
+
+            <p className="mt-4 leading-7 text-[#b7b2a6]">
+              Describe your legal question and get clear,
+              easy-to-understand guidance.
             </p>
 
+            <div className="mt-8 text-sm font-semibold text-[#c9a64a]">
+              Ask a Question →
+            </div>
+          </Link>
+
+          {/* Legal Learning */}
+          <Link
+            href="/learn"
+            className="group rounded-3xl border border-[#37342c] bg-[#191814] p-8 transition duration-300 hover:-translate-y-2 hover:border-[#c9a64a]"
+          >
+            <div className="flex items-center justify-between">
+              <span className="text-4xl text-[#c9a64a]">◈</span>
+              <span className="text-sm text-[#b7b2a6]">03</span>
+            </div>
+
+            <h3 className="mt-12 font-serif text-3xl">
+              Legal Learning
+            </h3>
+
+            <p className="mt-4 leading-7 text-[#b7b2a6]">
+              Learn important legal concepts through simple
+              explanations and useful examples.
+            </p>
+
+            <div className="mt-8 text-sm font-semibold text-[#c9a64a]">
+              Start Learning →
+            </div>
+          </Link>
+
+        </div>
+      </section>
+
+      {/* AI Section */}
+      <section className="px-6 pb-20 md:px-16 lg:px-24">
+
+        <div className="rounded-3xl border border-[#37342c] bg-[#12120f] p-8 md:p-12">
+
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#c9a64a]">
+                Your legal companion
+              </p>
+
+              <h2 className="mt-5 font-serif text-4xl md:text-5xl">
+                Have a question?
+                <br />
+                <span className="text-[#c9a64a]">
+                  Start here.
+                </span>
+              </h2>
+            </div>
+
+            <div>
+              <p className="leading-8 text-[#b7b2a6]">
+                LawLink's AI assistant helps turn complicated
+                legal questions into understandable information,
+                so you can better understand your situation and
+                explore possible next steps.
+              </p>
+
+              <Link
+                href="/ai-help"
+                className="mt-7 inline-block rounded-full bg-[#c9a64a] px-7 py-3 font-semibold text-[#0b0b09]"
+              >
+                Open AI Legal Assistant
+              </Link>
+            </div>
+
           </div>
-
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-            <div className="rounded-2xl border border-slate-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
-
-              <div className="text-3xl">
-                🎯
-              </div>
-
-              <h3 className="mt-5 text-xl font-bold">
-                Scenario-based learning
-              </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                Learn through realistic situations rather than
-                complicated legal textbooks.
-              </p>
-
-            </div>
-
-
-            <div className="rounded-2xl border border-slate-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
-
-              <div className="text-3xl">
-                🏆
-              </div>
-
-              <h3 className="mt-5 text-xl font-bold">
-                Gamified education
-              </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                Earn XP, unlock badges, maintain streaks and track
-                your learning progress.
-              </p>
-
-            </div>
-
-
-            <div className="rounded-2xl border border-slate-200 p-7 transition hover:-translate-y-1 hover:shadow-lg">
-
-              <div className="text-3xl">
-                🤖
-              </div>
-
-              <h3 className="mt-5 text-xl font-bold">
-                AI legal awareness
-              </h3>
-
-              <p className="mt-3 leading-7 text-slate-600">
-                Ask questions in simple language and discover
-                relevant trusted resources.
-              </p>
-
-            </div>
-
-          </div>
-
         </div>
 
       </section>
-
 
       {/* Disclaimer */}
-      <section className="bg-slate-900 px-6 py-10 text-center text-slate-300">
+      <section className="border-t border-[#37342c] px-6 py-10 md:px-16 lg:px-24">
 
-        <p className="mx-auto max-w-3xl text-sm leading-6">
-          ⚠️ LawLink provides legal awareness and educational
-          information only. It is not a substitute for professional
-          legal advice.
+        <p className="max-w-4xl text-sm leading-7 text-[#817d73]">
+          LawLink provides general legal information for educational
+          purposes. It is not a substitute for advice from a qualified
+          legal professional.
         </p>
 
       </section>
 
-
       {/* Footer */}
-      <footer className="bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+      <footer className="border-t border-[#37342c] px-6 py-8 md:px-16 lg:px-24">
 
-        <p>
-          © 2026 LawLink • Know your rights. Know your next step.
-        </p>
+        <div className="flex flex-col justify-between gap-4 md:flex-row">
+
+          <span className="font-semibold tracking-[0.15em] text-[#c9a64a]">
+            § LAWLINK
+          </span>
+
+          <span className="text-sm text-[#817d73]">
+            Legal technology for everyone.
+          </span>
+
+        </div>
 
       </footer>
 

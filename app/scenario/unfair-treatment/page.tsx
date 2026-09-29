@@ -41,48 +41,72 @@ export default function UnfairTreatmentScenario() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <main className="mx-auto max-w-3xl px-6 py-10">
-        {/* Header */}
-        <div className="mb-8">
+    <div className="min-h-screen bg-[#0b0b09] text-[#f0ede3]">
+      {/* Header */}
+      <header className="border-b border-[#37342c] bg-[#0b0b09]">
+        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
           <Link
             href="/learn/student-workplace"
-            className="text-sm font-medium text-blue-600 hover:text-blue-700"
+            className="flex items-center gap-3"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c9a64a] text-xl text-[#c9a64a]">
+              §
+            </div>
+
+            <div>
+              <p className="text-lg font-bold tracking-[0.2em] text-[#f0ede3]">
+                LAWLINK
+              </p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#b7b2a6]">
+                Legal Awareness
+              </p>
+            </div>
+          </Link>
+
+          <Link
+            href="/learn/student-workplace"
+            className="text-sm font-medium text-[#c9a64a] transition hover:text-[#d8b65a]"
           >
             ← Back to Student & Workplace Rights
           </Link>
+        </div>
+      </header>
 
-          <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-100 text-2xl">
+      <main className="mx-auto max-w-3xl px-6 py-10">
+        {/* Page Heading */}
+        <div className="mb-8">
+          <div className="flex items-center gap-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#37342c] bg-[#191814] text-2xl">
               🎓
             </div>
 
             <div>
-              <p className="text-sm font-semibold text-indigo-600">
-                STUDENT & WORKPLACE RIGHTS
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c9a64a]">
+                Student & Workplace Rights
               </p>
 
-              <h1 className="text-2xl font-bold text-slate-900">
+              <h1 className="mt-1 text-3xl font-bold text-[#f0ede3]">
                 Unfair Treatment
               </h1>
             </div>
           </div>
         </div>
 
-        {/* Scenario */}
-        <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-          <div className="mb-6 rounded-2xl bg-indigo-50 p-5">
-            <p className="mb-2 text-sm font-bold uppercase tracking-wide text-indigo-700">
+        {/* Scenario Card */}
+        <section className="rounded-3xl border border-[#37342c] bg-[#191814] p-6 shadow-2xl md:p-8">
+          {/* Scenario Introduction */}
+          <div className="mb-6 rounded-2xl border border-[#37342c] bg-[#211f19] p-5">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#c9a64a]">
               Real-life scenario
             </p>
 
-            <p className="leading-7 text-slate-700">
+            <p className="leading-7 text-[#b7b2a6]">
               You believe you have been treated unfairly at your college or
               workplace. You have messages and other records that may help
               explain what happened.
             </p>
 
-            <p className="mt-4 font-semibold text-slate-900">
+            <p className="mt-4 font-semibold text-[#f0ede3]">
               What is a sensible next step?
             </p>
           </div>
@@ -95,27 +119,31 @@ export default function UnfairTreatmentScenario() {
               return (
                 <button
                   key={option.id}
-                  onClick={() => !submitted && setSelectedAnswer(option.id)}
+                  onClick={() =>
+                    !submitted && setSelectedAnswer(option.id)
+                  }
                   disabled={submitted}
                   className={`flex w-full items-start gap-4 rounded-2xl border p-4 text-left transition ${
                     isSelected
-                      ? "border-blue-500 bg-blue-50 ring-2 ring-blue-100"
-                      : "border-slate-200 bg-white hover:border-blue-300 hover:bg-slate-50"
+                      ? "border-[#c9a64a] bg-[#211f19] ring-2 ring-[#9d7c2f]/30"
+                      : "border-[#37342c] bg-[#12120f] hover:border-[#9d7c2f] hover:bg-[#211f19]"
                   } ${
-                    submitted ? "cursor-default" : "cursor-pointer"
+                    submitted
+                      ? "cursor-default"
+                      : "cursor-pointer"
                   }`}
                 >
                   <span
                     className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-bold ${
                       isSelected
-                        ? "bg-blue-600 text-white"
-                        : "bg-slate-100 text-slate-600"
+                        ? "bg-[#c9a64a] text-[#0b0b09]"
+                        : "bg-[#211f19] text-[#b7b2a6]"
                     }`}
                   >
                     {option.id}
                   </span>
 
-                  <span className="pt-1 text-sm leading-6 text-slate-700">
+                  <span className="pt-1 text-sm leading-6 text-[#b7b2a6]">
                     {option.text}
                   </span>
                 </button>
@@ -128,7 +156,7 @@ export default function UnfairTreatmentScenario() {
             <button
               onClick={handleSubmit}
               disabled={!selectedAnswer}
-              className="mt-6 w-full rounded-2xl bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+              className="mt-6 w-full rounded-2xl bg-[#c9a64a] px-5 py-3 font-semibold text-[#0b0b09] transition hover:bg-[#d8b65a] disabled:cursor-not-allowed disabled:bg-[#37342c] disabled:text-[#77736a]"
             >
               Check Answer
             </button>
@@ -137,8 +165,10 @@ export default function UnfairTreatmentScenario() {
           {/* Result */}
           {submitted && (
             <div
-              className={`mt-6 rounded-2xl p-5 ${
-                isCorrect ? "bg-emerald-50" : "bg-rose-50"
+              className={`mt-6 rounded-2xl border p-5 ${
+                isCorrect
+                  ? "border-[#9d7c2f] bg-[#211f19]"
+                  : "border-[#37342c] bg-[#12120f]"
               }`}
             >
               <div className="flex items-start gap-3">
@@ -149,20 +179,22 @@ export default function UnfairTreatmentScenario() {
                 <div>
                   <h2
                     className={`font-bold ${
-                      isCorrect ? "text-emerald-800" : "text-rose-800"
+                      isCorrect
+                        ? "text-[#d8b65a]"
+                        : "text-[#c9a64a]"
                     }`}
                   >
                     {isCorrect ? "Correct!" : "Not quite!"}
                   </h2>
 
-                  <p className="mt-2 text-sm leading-6 text-slate-700">
+                  <p className="mt-2 text-sm leading-6 text-[#b7b2a6]">
                     {isCorrect
                       ? "Keeping relevant records and using an appropriate support or grievance channel can help create a clear record of the concern. The specific process and available protections depend on the institution, workplace and applicable rules."
                       : "Consider keeping relevant records and using an appropriate support or grievance channel. The specific process depends on the institution, workplace and applicable rules."}
                   </p>
 
                   {isCorrect && (
-                    <p className="mt-3 font-bold text-emerald-700">
+                    <p className="mt-3 font-bold text-[#d8b65a]">
                       +50 XP ⭐
                     </p>
                   )}
@@ -175,7 +207,7 @@ export default function UnfairTreatmentScenario() {
           {submitted && (
             <Link
               href="/learn/student-workplace"
-              className="mt-6 block w-full rounded-2xl bg-slate-900 px-5 py-3 text-center font-semibold text-white transition hover:bg-slate-800"
+              className="mt-6 block w-full rounded-2xl border border-[#c9a64a] bg-[#c9a64a] px-5 py-3 text-center font-semibold text-[#0b0b09] transition hover:bg-[#d8b65a]"
             >
               Back to Student & Workplace Rights
             </Link>
@@ -183,12 +215,19 @@ export default function UnfairTreatmentScenario() {
         </section>
 
         {/* Disclaimer */}
-        <p className="mt-8 text-center text-xs leading-5 text-slate-400">
+        <p className="mt-8 text-center text-xs leading-5 text-[#77736a]">
           LawLink provides legal awareness and educational information only.
           It is not a substitute for professional legal advice. Specific
           rights and procedures can vary by jurisdiction and situation.
         </p>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-[#37342c] px-6 py-6">
+        <p className="text-center text-xs uppercase tracking-[0.18em] text-[#77736a]">
+          § LAWLINK — Learn your rights. Understand your options.
+        </p>
+      </footer>
     </div>
   );
 }

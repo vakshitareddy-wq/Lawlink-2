@@ -18,216 +18,306 @@ export default function AIHelpPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      {/* Sidebar */}
-      <aside className="fixed left-0 top-0 hidden h-screen w-64 border-r border-slate-200 bg-white lg:block">
-        <div className="border-b border-slate-200 p-6">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-xl text-white">
-              ⚖️
-            </div>
+    <div className="min-h-screen bg-[#0b0b09] text-[#f0ede3]">
 
-            <span className="text-xl font-bold text-slate-900">
-              LawLink
-            </span>
+      {/* Top Brand */}
+      <header className="border-b border-[#37342c] bg-[#0b0b09]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
+
+          <Link
+            href="/"
+            className="text-xl font-bold tracking-[0.2em] text-[#c9a64a]"
+          >
+            § LAWLINK
           </Link>
+
+          <Link
+            href="/"
+            className="rounded-full border border-[#37342c] px-5 py-2 text-sm text-[#b7b2a6] transition hover:border-[#c9a64a] hover:text-[#c9a64a]"
+          >
+            ← Back to Home
+          </Link>
+
         </div>
+      </header>
 
-        <nav className="space-y-2 p-4">
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-100"
-          >
-            🏠 Home
-          </Link>
+      {/* Main */}
+      <main className="mx-auto max-w-6xl px-6 py-12 md:px-10 md:py-16">
 
-          <Link
-            href="/learn"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-100"
-          >
-            📚 Learn
-          </Link>
+        {/* Page Heading */}
+        <section className="mb-10">
 
-          <Link
-            href="/ai-help"
-            className="flex items-center gap-3 rounded-xl bg-blue-50 px-4 py-3 font-semibold text-blue-700"
-          >
-            🤖 AI Help
-          </Link>
-
-          <Link
-            href="#"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-100"
-          >
-            🔗 Resources
-          </Link>
-
-          <Link
-            href="#"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-100"
-          >
-            🏆 Badges
-          </Link>
-
-          <Link
-            href="#"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-100"
-          >
-            👤 Profile
-          </Link>
-        </nav>
-
-        <div className="absolute bottom-6 px-6 text-xs leading-5 text-slate-500">
-          LawLink provides legal awareness only and is not a substitute for
-          professional legal advice.
-        </div>
-      </aside>
-
-      {/* Main content */}
-      <main className="lg:ml-64">
-        {/* Header */}
-        <header className="border-b border-slate-200 bg-white px-6 py-5">
-          <p className="text-sm font-medium text-blue-600">
-            LawLink Assistant
+          <p className="text-sm uppercase tracking-[0.3em] text-[#c9a64a]">
+            LAWLINK ASSISTANT
           </p>
 
-          <h1 className="mt-1 text-2xl font-bold text-slate-900">
-            Ask about your rights
+          <h1 className="mt-4 max-w-3xl font-serif text-5xl leading-tight md:text-6xl">
+            Ask about your
+            <br />
+            <span className="text-[#c9a64a]">
+              rights.
+            </span>
           </h1>
-        </header>
 
-        <div className="mx-auto max-w-5xl px-6 py-10">
-          {/* Intro */}
-          <section className="rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-700 p-8 text-white shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-3xl">
-                🤖
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#b7b2a6]">
+            Describe your situation in everyday language and explore
+            legal-awareness information and possible next steps.
+          </p>
+
+        </section>
+
+        {/* AI Introduction */}
+        <section className="relative overflow-hidden rounded-3xl border border-[#37342c] bg-[#191814] p-8 md:p-10">
+
+          {/* Decorative element */}
+          <div className="absolute right-[-50px] top-[-50px] h-40 w-40 rounded-full border border-[#9d7c2f]/30" />
+
+          <div className="relative flex flex-col gap-6 md:flex-row md:items-start">
+
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-[#c9a64a] bg-[#211f19] text-3xl text-[#c9a64a]">
+              ✦
+            </div>
+
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#c9a64a]">
+                AI LEGAL ASSISTANT
+              </p>
+
+              <h2 className="mt-2 font-serif text-3xl md:text-4xl">
+                Meet the LawLink Assistant
+              </h2>
+
+              <p className="mt-3 max-w-2xl leading-7 text-[#b7b2a6]">
+                Get simple legal-awareness information and practical
+                next steps for everyday situations.
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* Chat Area */}
+        <section className="mt-6 overflow-hidden rounded-3xl border border-[#37342c] bg-[#12120f]">
+
+          {/* Assistant Message */}
+          <div className="border-b border-[#37342c] p-7 md:p-8">
+
+            <div className="flex gap-4">
+
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#9d7c2f] bg-[#211f19] text-lg text-[#c9a64a]">
+                ✦
               </div>
 
-              <div>
-                <h2 className="text-2xl font-bold">
-                  Meet the LawLink Assistant
-                </h2>
+              <div className="max-w-3xl">
 
-                <p className="mt-2 max-w-2xl text-blue-100">
-                  Get simple legal-awareness information and practical next
-                  steps in everyday situations.
+                <p className="font-semibold text-[#f0ede3]">
+                  LawLink Assistant
                 </p>
+
+                <p className="mt-2 leading-7 text-[#b7b2a6]">
+                  Hi! I can help you understand everyday legal situations.
+                  Tell me what happened, and I&apos;ll explain possible next
+                  steps in simple language.
+                </p>
+
               </div>
-            </div>
-          </section>
 
-          {/* Chat area */}
-          <section className="mt-6 rounded-3xl border border-slate-200 bg-white shadow-sm">
-            {/* Assistant message */}
-            <div className="border-b border-slate-200 p-6">
-              <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100">
-                  🤖
-                </div>
-
-                <div className="max-w-2xl">
-                  <p className="font-semibold text-slate-900">
-                    LawLink Assistant
-                  </p>
-
-                  <p className="mt-1 leading-7 text-slate-600">
-                    Hi! I can help you understand everyday legal situations.
-                    Tell me what happened, and I&apos;ll explain possible next
-                    steps in simple language.
-                  </p>
-                </div>
-              </div>
             </div>
 
-            {/* Suggestions */}
-            <div className="p-6">
-              <p className="mb-3 text-sm font-semibold text-slate-700">
-                Try asking:
+          </div>
+
+          {/* Suggested Questions */}
+          <div className="p-7 md:p-8">
+
+            <div className="mb-5 flex items-center justify-between">
+
+              <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#c9a64a]">
+                Try asking
               </p>
 
-              <div className="grid gap-3 md:grid-cols-2">
-                {suggestedQuestions.map((question) => (
-                  <button
-                    key={question}
-                    onClick={() => handleSuggestion(question)}
-                    className="rounded-2xl border border-slate-200 p-4 text-left text-sm leading-6 text-slate-600 transition hover:border-blue-300 hover:bg-blue-50"
-                  >
-                    {question}
-                  </button>
-                ))}
-              </div>
+              <span className="text-xs text-[#817d73]">
+                SUGGESTED QUESTIONS
+              </span>
+
             </div>
 
-            {/* Input */}
-            <div className="border-t border-slate-200 p-6">
-              <div className="flex flex-col gap-3 md:flex-row">
-                <input
-                  type="text"
-                  value={message}
-                  onChange={(event) => setMessage(event.target.value)}
-                  placeholder="Describe your situation..."
-                  className="flex-1 rounded-2xl border border-slate-300 px-5 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-                />
+            <div className="grid gap-3 md:grid-cols-2">
 
+              {suggestedQuestions.map((question) => (
                 <button
-                  disabled={!message.trim()}
-                  className="rounded-2xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                  key={question}
+                  onClick={() => handleSuggestion(question)}
+                  className="group rounded-2xl border border-[#37342c] bg-[#191814] p-5 text-left text-sm leading-6 text-[#b7b2a6] transition duration-200 hover:-translate-y-1 hover:border-[#c9a64a] hover:bg-[#211f19] hover:text-[#f0ede3]"
                 >
-                  Ask Assistant →
+                  <span className="mr-2 text-[#c9a64a] transition group-hover:text-[#d8b65a]">
+                    →
+                  </span>
+
+                  {question}
                 </button>
+              ))}
+
+            </div>
+
+          </div>
+
+          {/* Input */}
+          <div className="border-t border-[#37342c] p-7 md:p-8">
+
+            <p className="mb-3 text-sm text-[#817d73]">
+              Describe your situation
+            </p>
+
+            <div className="flex flex-col gap-3 md:flex-row">
+
+              <input
+                type="text"
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                placeholder="Type your legal question..."
+                className="flex-1 rounded-2xl border border-[#37342c] bg-[#191814] px-5 py-4 text-sm text-[#f0ede3] placeholder-[#817d73] outline-none transition focus:border-[#c9a64a] focus:ring-1 focus:ring-[#c9a64a]"
+              />
+
+              <button
+                disabled={!message.trim()}
+                className="rounded-2xl bg-[#c9a64a] px-7 py-4 font-semibold text-[#0b0b09] transition hover:bg-[#d8b65a] disabled:cursor-not-allowed disabled:bg-[#37342c] disabled:text-[#817d73]"
+              >
+                Ask Assistant →
+              </button>
+
+            </div>
+
+            <p className="mt-4 text-xs leading-5 text-[#817d73]">
+              LawLink provides legal-awareness information, not professional
+              legal advice. For urgent or serious matters, consider contacting
+              an appropriate qualified professional or official authority.
+            </p>
+
+          </div>
+
+        </section>
+
+        {/* How It Works */}
+        <section className="mt-12">
+
+          <div className="mb-7">
+
+            <p className="text-sm uppercase tracking-[0.3em] text-[#c9a64a]">
+              HOW IT WORKS
+            </p>
+
+            <h2 className="mt-3 font-serif text-3xl md:text-4xl">
+              From question to next step.
+            </h2>
+
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+
+            {/* Step 1 */}
+            <div className="rounded-2xl border border-[#37342c] bg-[#191814] p-6 transition hover:border-[#c9a64a]">
+
+              <div className="flex items-center justify-between">
+                <span className="text-2xl text-[#c9a64a]">
+                  💬
+                </span>
+
+                <span className="text-xs text-[#817d73]">
+                  01
+                </span>
               </div>
 
-              <p className="mt-3 text-xs leading-5 text-slate-400">
-                LawLink provides legal-awareness information, not professional
-                legal advice. For urgent or serious matters, consider
-                contacting an appropriate qualified professional or official
-                authority.
-              </p>
-            </div>
-          </section>
-
-          {/* How it works */}
-          <section className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-200 bg-white p-5">
-              <div className="text-2xl">💬</div>
-              <h3 className="mt-3 font-bold text-slate-900">
+              <h3 className="mt-7 font-serif text-2xl">
                 Ask naturally
               </h3>
-              <p className="mt-1 text-sm leading-6 text-slate-500">
-                Describe your situation in everyday language.
+
+              <p className="mt-2 text-sm leading-6 text-[#b7b2a6]">
+                Describe your situation using everyday language.
               </p>
+
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-5">
-              <div className="text-2xl">📚</div>
-              <h3 className="mt-3 font-bold text-slate-900">
+            {/* Step 2 */}
+            <div className="rounded-2xl border border-[#37342c] bg-[#191814] p-6 transition hover:border-[#c9a64a]">
+
+              <div className="flex items-center justify-between">
+                <span className="text-2xl text-[#c9a64a]">
+                  ◈
+                </span>
+
+                <span className="text-xs text-[#817d73]">
+                  02
+                </span>
+              </div>
+
+              <h3 className="mt-7 font-serif text-2xl">
                 Learn the basics
               </h3>
-              <p className="mt-1 text-sm leading-6 text-slate-500">
-                Get simplified legal-awareness information.
+
+              <p className="mt-2 text-sm leading-6 text-[#b7b2a6]">
+                Understand relevant legal concepts in simpler language.
               </p>
+
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-5">
-              <div className="text-2xl">🧭</div>
-              <h3 className="mt-3 font-bold text-slate-900">
+            {/* Step 3 */}
+            <div className="rounded-2xl border border-[#37342c] bg-[#191814] p-6 transition hover:border-[#c9a64a]">
+
+              <div className="flex items-center justify-between">
+                <span className="text-2xl text-[#c9a64a]">
+                  → 
+                </span>
+
+                <span className="text-xs text-[#817d73]">
+                  03
+                </span>
+              </div>
+
+              <h3 className="mt-7 font-serif text-2xl">
                 Find next steps
               </h3>
-              <p className="mt-1 text-sm leading-6 text-slate-500">
-                Understand possible actions and official resources.
-              </p>
-            </div>
-          </section>
 
-          {/* Disclaimer */}
-          <p className="mt-8 text-center text-xs leading-5 text-slate-400">
+              <p className="mt-2 text-sm leading-6 text-[#b7b2a6]">
+                Explore possible actions and official resources.
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* Disclaimer */}
+        <section className="mt-12 border-t border-[#37342c] pt-8">
+
+          <p className="mx-auto max-w-3xl text-center text-xs leading-6 text-[#817d73]">
             LawLink is an educational legal-awareness platform. AI-generated
             information may be incomplete or inaccurate and should not be
             treated as professional legal advice.
           </p>
-        </div>
+
+        </section>
+
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-[#37342c]">
+
+        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-4 px-6 py-8 md:flex-row md:px-10">
+
+          <span className="font-semibold tracking-[0.15em] text-[#c9a64a]">
+            § LAWLINK
+          </span>
+
+          <span className="text-sm text-[#817d73]">
+            Legal technology for everyone.
+          </span>
+
+        </div>
+
+      </footer>
+
     </div>
   );
 }
